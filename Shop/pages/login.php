@@ -6,16 +6,13 @@
 
 <meta charset="UTF-8">
 <title> WebSite 1.0 </title>
-<?php
-    include "../includes/header.php"
-?>
 
 </head>
 
 <body>
 
 <?php
-  include "../includes/navbar.php"
+  include "../includes/header.php"
 ?>
 
 

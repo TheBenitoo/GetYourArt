@@ -3,25 +3,15 @@
 <html>
 
 <head>
-
 <meta charset="UTF-8">
 <title> WebSite 1.0 </title>
+</head>
+
+
+<body>
 <?php
     include "../includes/header.php"
 ?>
-
-</head>
-
-<body>
-
-<?php
-  include "../includes/navbar.php"
-?>
-
-
-
-<body>
-
 <table>
 <caption> Profile </caption>
 <tr> 
@@ -38,7 +28,6 @@
 </tr>
 
 </table>
-<button type="submit" name="add"> Add to Cart</button>
 
 </body>
 </html>
