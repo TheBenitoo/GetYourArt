@@ -113,6 +113,35 @@
   }
 
 
+/*/Sort/*/  
+.product-filter {
+	display: flex;
+  }
+
+.sort {
+	display: flex;
+}
+
+.collection-sort {
+	display: flex;
+	flex-direction: column;
+}
+
+@media (max-width: 480px) {
+	.product-filter {
+	  flex-direction: column;
+	}
+  }
+
+  @media (max-width: 480px) {
+	.product-filter {
+	  flex-direction: column;
+	}
+	.sort {
+	  align-self: flex-start;
+	}
+  }
+
 /*/Home/*/
 
 @import url(font-awesome.min.css);

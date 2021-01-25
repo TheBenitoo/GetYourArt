@@ -99,31 +99,46 @@ function filterTable($query)
 <?php
      include "../includes/header.php"
 ?>
-<section id="filter">
-<h2>Filter here</h2>
-</section>
-<form action="shop.php" method="post">
+<!-- Filter -->
+
+<!--<form action="shop.php" method="post">
             <input type="text" name="valueToSearch" placeholder="Value To Search"><br><br>
             <input type="submit" name="search" value="Filter"><br><br>
-</form>
+</form> -->
+
+<!-- Dropdown -->
+<nav class="product-filter">
+
+     <h1>Filter</h1> 
 
 <form action="shop.php" method="post">
-<label for="categories">Category:</label>
-     <select id="categories" name="valueToSearch">
-          <option value="popart">PopArt</option>
-          <option value="artwork">Artwork</option>
-          <option value="smth1">Smth</option>
-     </select>
-<input type="submit" name="search" value="Filter"><br><br>
-<input type="submit" name="reset" value="Zurücksetzen"><br><br>
+<div class="sort">
+
+     <div class="collection-sort">
+               <label form="categories">Category:</label>
+                    <select id="categories" name="valueToSearch">
+                         <option value="popart">PopArt</option>
+                         <option value="artwork">Artwork</option>
+                         <option value="smth1">Smth</option>
+                    </select>
+     </div>
+
+     <div class="collection-sort">
+          <input type="submit" name="search" value="Filter"><br><br>
+          <input type="submit" name="reset" value="Zurücksetzen"><br><br>
+     </div>          
 </form>
+     
+</div>
+</nav>
+
 
 <section class="shop">
-<?php
+
+<?php while($row = mysqli_fetch_array($search_result)):?>
+<!--
 $x = 9;
 $i;
-while($row = mysqli_fetch_array($search_result)):
-/*
 for ($i=1; $i<=$x; $i++)
 {
     $product = $i;
@@ -139,23 +154,23 @@ for ($i=1; $i<=$x; $i++)
     mysqli_free_result($result);
     //echo "" .$obj->ProductName;
     
-*/     
-    echo  "<div class='shop-card'>";
-    echo  "<a href='../pages/product.php?product=".$row['ProductID']."'>";  
-    echo  "<div class='shop-image'>";
-    echo  "<img src='".$row['ImageSource']."'>";
-    echo  "</div>";
-    echo  "<div class='shop-info'>";
-    echo  "<h5>".$row['ProductName']."</h5>";
-    echo  "<h6>".$row['ProductPrice']."</h6>";
-    echo  "</div>";
-    echo  "</div>";
-    echo  "</a>";
+-->     
+    <div class='shop-card'>
+          <a href='../pages/product.php?product=<?php echo $row['ProductID'];?>"'>  
+          <div class='shop-image'>
+               <img src='<?php echo $row['ImageSource'];?>'>
+          </div>
+          <div class='shop-info'>
+               <h5><?php echo $row['ProductName'];?></h5>
+               <h6><?php echo $row['ProductPrice'];?></h6>
+          </div>
+    </div>
+    </a>
     
 
-/*    mysqli_close($db);*/
-endwhile;
-?>
+<!--    mysqli_close($db);-->
+<?php endwhile;?>
+
 </section>
 
 
