@@ -1,100 +1,67 @@
 <?php   
  session_start();  
- $connect = mysqli_connect("localhost", "root", "", "shop");  
- if(isset($_POST["add_to_cart"]))  
- {  
-      if(isset($_SESSION["shopping_cart"]))  
-      {  
-           $item_array_id = array_column($_SESSION["shopping_cart"], "item_id");  
-           if(!in_array($_GET["id"], $item_array_id))  
-           {  
-                $count = count($_SESSION["shopping_cart"]);  
-                $item_array = array(  
-                     'item_id'               =>     $_GET["id"],  
-                     'item_name'               =>     $_POST["hidden_name"],  
-                     'item_price'          =>     $_POST["hidden_price"],  
-                     'item_quantity'          =>     $_POST["quantity"]  
-                );  
-                $_SESSION["shopping_cart"][$count] = $item_array;  
-           }  
-           else  
-           {  
-                echo '<script>alert("Item Already Added")</script>';  
-                echo '<script>window.location="contact.php"</script>';  
-           }  
-      }  
-      else  
-      {  
-           $item_array = array(  
-                'item_id'               =>     $_GET["id"],  
-                'item_name'               =>     $_POST["hidden_name"],  
-                'item_price'          =>     $_POST["hidden_price"],  
-                'item_quantity'          =>     $_POST["quantity"]  
-           );  
-           $_SESSION["shopping_cart"][0] = $item_array;  
-      }  
- }  
- if(isset($_GET["action"]))  
- {  
-      if($_GET["action"] == "delete")  
-      {  
-           foreach($_SESSION["shopping_cart"] as $keys => $values)  
-           {  
-                if($values["item_id"] == $_GET["id"])  
-                {  
-                     unset($_SESSION["shopping_cart"][$keys]);  
-                     echo '<script>alert("Item Removed")</script>';  
-                     echo '<script>window.location="contact.php"</script>';  
-                }  
-           }  
-      }  
- }  
+ if(isset($_POST['search']))
+{
+    $valueToSearch = $_POST['valueToSearch'];
+    // search in all table columns
+    // using concat mysql function
+    $query = "SELECT * FROM `product` WHERE CONCAT(`ProductID`, `ProductDescription`, `ProductName`, `ProductCategory`) LIKE '%".$valueToSearch."%'";
+    $search_result = filterTable($query);
+    
+}
+ else {
+    $query = "SELECT * FROM `product`";
+    $search_result = filterTable($query);
+}
+
+// function to connect and execute the query
+function filterTable($query)
+{
+    $connect = mysqli_connect("localhost", "root", "", "shop");
+    $filter_Result = mysqli_query($connect, $query);
+    return $filter_Result;
+}
  ?>  
  <!DOCTYPE html>  
  <html>  
       <head>  
            <title>Shopping Cart</title>  
-
+           <style>
+            table,tr,th,td
+            {
+                border: 1px solid black;
+            }
+           </style>
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
-           <?php
-    include ("../includes/navbar.php");
-?>  
+
       </head>  
       <body>  
-           <br />  
-           <div class="container" style="width:700px;">  
-                <h3 align="center"></h3><br />  
-                <?php  
-                $query = "SELECT * FROM product ORDER BY ProductID ASC";  
-                $result = mysqli_query($connect, $query);  
-                if(mysqli_num_rows($result) > 0)  
-                {  
-                     while($row = mysqli_fetch_array($result))  
-                     {  
-                ?>  
-                <div class="box1 center img">  
-                     <form method="post" action="contact.php?action=add&id=<?php echo $row["ProductID"]; ?>">  
-                          <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">  
-                               <img src="<?php echo $row["ImageSource"]; ?>" class="" /><br />  
-                               <h4 class="text-info"><?php echo $row["ProductName"]; ?></h4>  
-                               <h4 class="text-danger">$ <?php echo $row["ProductPrice"]; ?></h4>  
-                               <input type="text" name="quantity" class="form-control" value="1" />  
-                               <input type="hidden" name="hidden_name" value="<?php echo $row["ProductName"]; ?>" />  
-                               <input type="hidden" name="hidden_price" value="<?php echo $row["ProductPrice"]; ?>" />  
-                               <input type="submit" name="add_to_cart" style="margin-top:5px;" class="" value="Add to Cart" />  
-                          </div>  
-                     </form>  
-                </div>  
-                <?php  
-                     }  
-                }  
-                ?>  
-                <div style="clear:both"></div>  
-                <br />  
-                
-           </div>  
-           <br />  
+      <?php
+      include "../includes/header.php"
+      ?>
+      <form action="contact.php" method="post">
+            <input type="text" name="valueToSearch" placeholder="Value To Search"><br><br>
+            <input type="submit" name="search" value="Filter"><br><br>
+            
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>Cat</th>
+                    <th>Name</th>
+                    <th>Desc</th>
+                </tr>
+
+                <?php while($row = mysqli_fetch_array($search_result)):?>
+                <tr>
+                    <td><?php echo $row['ProductID'];?></td>
+                    <td><?php echo $row['ProductCategory'];?></td>
+                    <td><?php echo $row['ProductName'];?></td>
+                    <td><?php echo $row['ProductDescription'];?></td>
+                </tr>
+                <?php endwhile;?>
+            </table>
+        </form>
       </body>  
  </html>

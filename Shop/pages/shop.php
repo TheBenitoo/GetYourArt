@@ -1,6 +1,6 @@
 <?php   
  session_start();  
- $connect = mysqli_connect("localhost", "root", "", "shop");  
+
  if(isset($_POST["add_to_cart"]))  
  {  
       if(isset($_SESSION["shopping_cart"]))  
@@ -49,6 +49,35 @@
            }  
       }  
  }  
+
+/* ///Filter/// */
+
+if(isset($_POST['search']))
+{
+    $valueToSearch = $_POST['valueToSearch'];
+    // search in all table columns
+    // using concat mysql function
+    $query = "SELECT * FROM `product` WHERE CONCAT(`ProductCategory`) LIKE '%".$valueToSearch."%'";
+    $search_result = filterTable($query);
+    
+}
+elseif(isset($_POST['reset'])){
+     $query = "SELECT * FROM `product`";
+     $search_result = filterTable($query);
+}
+ else {
+    $query = "SELECT * FROM `product`";
+    $search_result = filterTable($query);
+}
+
+// function to connect and execute the query
+function filterTable($query)
+{
+    $connect = mysqli_connect("localhost", "root", "", "shop");
+    $filter_Result = mysqli_query($connect, $query);
+    return $filter_Result;
+}
+
  ?>  
 
 <!DOCTYPE html>
@@ -73,11 +102,28 @@
 <section id="filter">
 <h2>Filter here</h2>
 </section>
+<form action="shop.php" method="post">
+            <input type="text" name="valueToSearch" placeholder="Value To Search"><br><br>
+            <input type="submit" name="search" value="Filter"><br><br>
+</form>
+
+<form action="shop.php" method="post">
+<label for="categories">Category:</label>
+     <select id="categories" name="valueToSearch">
+          <option value="popart">PopArt</option>
+          <option value="artwork">Artwork</option>
+          <option value="smth1">Smth</option>
+     </select>
+<input type="submit" name="search" value="Filter"><br><br>
+<input type="submit" name="reset" value="Zurücksetzen"><br><br>
+</form>
 
 <section class="shop">
 <?php
 $x = 9;
 $i;
+while($row = mysqli_fetch_array($search_result)):
+/*
 for ($i=1; $i<=$x; $i++)
 {
     $product = $i;
@@ -93,32 +139,23 @@ for ($i=1; $i<=$x; $i++)
     mysqli_free_result($result);
     //echo "" .$obj->ProductName;
     
-     
+*/     
     echo  "<div class='shop-card'>";
-    echo  "<a href='../pages/product.php?product=".$product."'>";  
+    echo  "<a href='../pages/product.php?product=".$row['ProductID']."'>";  
     echo  "<div class='shop-image'>";
-    echo  "<img src='".$obj->ImageSource."'>";
+    echo  "<img src='".$row['ImageSource']."'>";
     echo  "</div>";
     echo  "<div class='shop-info'>";
-    echo  "<h5>".$obj->ProductName."</h5>";
-    echo  "<h6>".$obj->ProductPrice."</h6>";
+    echo  "<h5>".$row['ProductName']."</h5>";
+    echo  "<h6>".$row['ProductPrice']."</h6>";
     echo  "</div>";
     echo  "</div>";
     echo  "</a>";
     
-}
-mysqli_close($db);
-?>
 
-<div class="shop-card">
-    <div class="shop-image">
-      <img src='../assets/images/PopArt.png'>
-    </div>
-    <div class="shop-info">
-      <h5>Winter Jacket</h5>
-      <h6>$99.99</h6>
-    </div>
-  </div>
+/*    mysqli_close($db);*/
+endwhile;
+?>
 </section>
 
 

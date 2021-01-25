@@ -58,10 +58,12 @@
 .shop {
   display: flex;
   flex-wrap: wrap;
+  flex-basis: 1000%;
   }
 
 .shop-card{
 	flex: 1 16%;
+	position: relative;
 	
 }
 
@@ -87,6 +89,7 @@
 }
 
 .shop-info{
+	position: absolute;
 	margin-top: auto;
 }
 
@@ -874,7 +877,7 @@
 		}
 
 			#three .inner article {
-				width: 26%;
+				width: 33%;
 				display: block;
 			}
 

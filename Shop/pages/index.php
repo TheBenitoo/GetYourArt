@@ -46,23 +46,23 @@
 					<article>
 						<div class="content">
 							<header>
-								<h3>Pellentesque adipis</h3>
+								<h3>Arten von Kunst</h3>
 							</header>
 							<div class="image fit">
-								<img src="images/pic01.jpg" alt="" />
+								<img src="../assets/images/pinsel.jpeg" alt="" />
 							</div>
-							<p>Cumsan mollis eros. Pellentesque a diam sit amet mi magna ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet lorem ipsum feugiat tempus.</p>
+							<p>Wir bieten allesmögliche an. Von PopArt, bishin zu ausgefallenen Werken, sowie auch Einzelstücke!</p>
 						</div>
 					</article>
 					<article class="alt">
 						<div class="content">
 							<header>
-								<h3>Morbi interdum mol</h3>
+								<h3>Künstler</h3>
 							</header>
 							<div class="image fit">
-								<img src="images/pic02.jpg" alt="" />
+								<img src="../assets/images/kuenstler.jpeg" alt="" />
 							</div>
-							<p>Cumsan mollis eros. Pellentesque a diam sit amet mi magna ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet lorem ipsum feugiat tempus.</p>
+							<p>Die Werke die sie in unserem Shop sehen stammen von allen möglichen Künstlern. Ob sehr unbekannt oder weltberühmt. Sie finden unter den Bildern jeweils dessen Künstler, sowie SocialMedia links.</p>
 						</div>
 					</article>
 				</div>
@@ -77,9 +77,9 @@
 							<header>
 								<h3>Kleine Künstler</h3>
 							</header>
-							<p>Wir bieten kleinen und neuen Künstlern an, uns eine Anfrage für den Verkauf in unserem Shop zu senden. Fülle einfach unten das Formular aus und schreibe uns ein Mail!</p>
+							<p>Wir bieten kleinen und neuen Künstlern an, uns eine Anfrage für den Verkauf in unserem Shop zu senden.</p>
 							<ul class="actions">
-								<li><a href="#" class="button rot">Learn More</a></li>
+								<li><a href="#" class="button rot">Mehr erfahren</a></li>
 							</ul>
 						</div>
 					</article>
@@ -87,11 +87,11 @@
 						<div class="content">
 							<span class="icon fa-diamond"></span>
 							<header>
-								<h3>Aliquam Nulla</h3>
+								<h3>Einzelstücke</h3>
 							</header>
-							<p>Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed.</p>
+							<p>Wenn Sie schnell genug sind, können sie von den Künstlern auch begehrte Einelstücke erhalten.</p>
 							<ul class="actions">
-								<li><a href="#" class="button rot">Learn More</a></li>
+								<li><a href="#" class="button rot">Mehr erfahren</a></li>
 							</ul>
 						</div>
 					</article>
@@ -99,11 +99,11 @@
 					<div class="content">
 							<span class="icon fa-laptop"></span>
 							<header>
-								<h3>Sed Magna</h3>
+								<h3>Anfragen</h3>
 							</header>
-							<p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula.</p>
+							<p>Bei Verkaufsanfragen oder allgemeinen Fragen, schreiben Sie uns einfach im Formuar unten.</p>
 							<ul class="actions">
-								<li><a href="#" class="button rot">Learn More</a></li>
+								<li><a href="#" class="button rot">Mehr Erfahren</a></li>
 							</ul>
 						</div>
 					</article>
