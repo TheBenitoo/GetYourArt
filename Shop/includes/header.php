@@ -19,6 +19,7 @@
 						<a href="../pages/index.php">Home</a>
 						<a href="../pages/shop.php">Shop</a>
 						<a href="../pages/cart.php">Cart</a>
+						<a href="../pages/login.php">Login</a>
 					</nav>
 				</div>
 			</header>

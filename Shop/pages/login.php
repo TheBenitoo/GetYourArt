@@ -16,11 +16,8 @@
 ?>
 
 
-
-<body>
-
-<!-- <section class="left">
-    <? include_once './newAccount.php'; ?> -->
+<section class="">
+    <?php include_once "../functions/login.php" ?> 
 </section>
 
 </body>
