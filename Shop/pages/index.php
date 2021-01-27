@@ -33,7 +33,7 @@
 					<header>
 						<h2>Über uns</h2>
 					</header>
-					<p>Wir sind eine kleine Gruppe von Künstlern und Informatikern. Uns fließt Farbe durch die Adern und wir wollen mehr Mesnchen an die Kunst bringen.</p>
+					<p>Wir sind eine kleine Gruppe von Künstlern und Informatikern. Uns fließt Farbe durch die Adern und wir wollen mehr Menschen an die Kunst bringen.</p>
 					<ul class="actions">
 						<li><a href="#" class="button rot">Learn More</a></li>
 					</ul>

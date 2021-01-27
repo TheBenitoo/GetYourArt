@@ -1,6 +1,9 @@
 <?php
+
+include "../includes/navbar.php";
+include "../includes/database_pdo.php";
 session_start();
-$pdo = new PDO('mysql:host=localhost;dbname=getyourart', 'root', '');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

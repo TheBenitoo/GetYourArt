@@ -1,6 +1,9 @@
 <?php
+
+include "../includes/navbar.php";
+
 session_start();
 session_destroy();
 
-echo "You successfully logged out!";
+echo "You have been successfully logged out!";
 

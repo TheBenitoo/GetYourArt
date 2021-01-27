@@ -1,6 +1,9 @@
 <?php
+
+include "../includes/navbar.php";
+require_once "../includes/database_pdo.php";
+
 session_start();
-$pdo = new PDO('mysql:host=localhost;dbname=getyourart', 'root', '');
 
 if (isset($_GET['login'])) {
     $email = $_POST['email'];
@@ -14,7 +17,7 @@ if (isset($_GET['login'])) {
         $_SESSION['userid'] = $user['id'];
         die('Login was successful! Let\'s keep on moving to <a href="secret.php">!');
     }  else  {
-        $errorMessage = "e-mail or password wrong. Please try again<br>!";
+        $errorMessage = "E-mail or password wrong. Please try again<br>!";
     }
 
 }
@@ -39,5 +42,7 @@ if(isset($errorMessage)) {
     <input type="password" size="40" maxlength="250" name="password" id="password"><br><br>
     <input type="submit" value="Let me in!">
 </form>
+    <h2>Not already registered?</h2>
+    <a href="registry.php" class="button rot"></a>
 </body>
 </html>
