@@ -446,6 +446,12 @@
 			}
 		}
 
+	section .form {
+		text-align: center;
+		margin: auto;
+		width: 75%;
+	}
+
 	header p {
 		position: relative;
 		margin: 0 0 1.5em 0;

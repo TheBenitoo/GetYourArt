@@ -1,6 +1,5 @@
 <?php
 
-include "../includes/navbar.php";
 require_once "../includes/database_pdo.php";
 
 session_start();
@@ -25,6 +24,7 @@ if (isset($_GET['login'])) {
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="../assets/CSS/style.css" />
     <meta charset="utf-8">
     <title>Log in</title>
 </head>
@@ -34,15 +34,16 @@ if(isset($errorMessage)) {
     echo $errorMessage;
 }
 ?>
-
+<section class="form">
 <form action ="?login=1" method = "post">
-    E-mail address:<br>
+    <label for="email">E-Mail address: <br></label>
     <input type="email" size="40" maxlength="250" name="email" id="email"><br><br>
-    Your Password:
+    <label for="password">Your Password: <br></label>
     <input type="password" size="40" maxlength="250" name="password" id="password"><br><br>
     <input type="submit" value="Let me in!">
 </form>
     <h2>Not already registered?</h2>
-    <a href="registry.php" class="button rot"></a>
+    <a href="registry.php" class="button rot">Get me registered!</a>
+</section>
 </body>
 </html>
