@@ -1,6 +1,6 @@
 <?php
 
-include "../includes/navbar.php";
+include "../includes/header.php";
 include "../includes/database_pdo.php";
 session_start();
 
@@ -16,27 +16,34 @@ session_start();
 <?php
 $showFormular = true;
 
+// checks if a form was send
 if(isset($_GET['register'])) {
     $error = false;
     $email = $_POST['email'];
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
     $password = $_POST['password'];
     $password2 = $_POST['password2'];
 
+    // checks if the entered email is in a valid format
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
      echo 'Please enter a valid email address!';
      $error = true;
     }
 
+    // checks if the user even entered a password
     if(strlen($password) == 0) {
         echo 'Please enter a password!';
         $error = true;
     }
+
+    // checks if the passwords match
     if($password != $password2) {
         echo 'The entered passwords don\'t match!';
         $error = true;
     }
+
+    //checks if the email-address has already been registered
     if(!$error) {
         $statement = $pdo->prepare("SELECT * FROM users WHERE email = :email");
         $result = $statement->execute(array('email' => $email));
@@ -48,11 +55,12 @@ if(isset($_GET['register'])) {
         }
     }
 
+    // registers the user or prompts an error if something was wrong
     if(!$error) {
         $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
-        $statement = $pdo->prepare("INSERT INTO users (email, password) VALUES (:email, :password)");
-        $result = $statement->execute(array('email' => $email, 'password' => $password_hash));
+        $statement = $pdo->prepare("INSERT INTO users (email, password, FirstName, LastName) VALUES (:email, :password, :firstname, :lastname)");
+        $result = $statement->execute(array('email' => $email, 'password' => $password_hash, 'firstname' => $firstname, 'lastname' => $lastname));
 
         if($result) {
             echo 'You have been successfully registered! <a href="login.php">Get me to the Login!</a>';
@@ -71,18 +79,18 @@ if($showFormular) {
         <input type="email" size="40" maxlength="250" name="email" id="email"><br><br>
 
         Your password:<br>
-        <input type="password" size="40"  maxlength="250" name="passwort" id="password"><br>
+        <input type="password" size="40"  maxlength="250" name="password" id="password"><br>
 
         Repeat your password:<br>
-        <input type="password" size="40" maxlength="250" name="passwort2" id="password2"><br><br>
+        <input type="password" size="40" maxlength="250" name="password2" id="password2"><br><br>
 
         Your first name:<br>
-        <input type="text" size="40" maxlength="250" name="fname" id="fname"><br><br>
+        <input type="text" size="40" maxlength="250" name="firstname" id="firstname"><br><br>
 
         Your last name:<br>
-        <input type="text" size="40" maxlength="250" name="lname" id="lname"><br><br>
+        <input type="text" size="40" maxlength="250" name="lastname" id="lastname"><br><br>
 
-        <input type="submit" value="Register">
+        <input type="submit" class="button rot" value="Register">
     </form>
 
 <?php
