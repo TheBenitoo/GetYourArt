@@ -19,7 +19,12 @@
 						<a href="../pages/contact.php">Test</a>
 						<a href="../pages/shop.php">Shop</a>
 						<a href="../pages/cart.php">Cart</a>
-						<a href="../pages/login.php">Login</a>
+						<?php if(isset($_SESSION['userid'])) : ?>
+                            <a href="../pages/logout.php">Logout</a>
+                        <?php else : ?>
+                            <a href="../pages/login.php">Login</a>
+                        <?php endif; ?>
+
 					</nav>
 				</div>
 			</header>

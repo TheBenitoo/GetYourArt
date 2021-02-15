@@ -12,18 +12,17 @@ if (isset($_GET['login'])) {
     $statement = $pdo->prepare("SELECT * FROM users WHERE Email = :email");
     $result = $statement->execute(array('email' => $email));
     $user = $statement->fetch();
-    var_dump($user);
     // checks if the password is correct
     if($user !== false && password_verify($password, $user['PASSWORD'])) {
         $_SESSION['userid'] = $user['UserID'];
-        die('Login was successful! Let\'s check out all the magic stuff! <a href="../pages/index.php" class="button rot"> Bring me to the Art!</a>');
+        die('Login was successful! Let\'s check out all the magic stuff! <a href="../pages/index.php" class="rot"> Bring me to the Art!</a>');
     }  else  {
         $errorMessage = "E-mail or password wrong. Please try again<br>!";
     }
 
 }
 ?>
-<!DOCTYPE html>
+
 <html>
 <head>
     <link rel="stylesheet" href="../assets/CSS/style.css" />
@@ -32,16 +31,10 @@ if (isset($_GET['login'])) {
 </head>
 <body>
 <?php
+    include "../includes/header.php";
+
     if(isset($errorMessage)) {
         echo $errorMessage;
-    }
-
-    var_dump($_SESSION);
-    if(isset($_SESSION['userid'])) {
-        include "../includes/header.php";
-    }
-    else {
-        include "../includes/header_after_login.php";
     }
 ?>
 
