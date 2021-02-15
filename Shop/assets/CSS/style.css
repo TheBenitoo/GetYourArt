@@ -1173,3 +1173,14 @@
 			}
 
 		}
+
+
+	div.form {
+		text-align: center;
+		display: inline-block;
+		margin-top: 20%;
+	}
+
+	#form input {
+		width: 100%;
+	}

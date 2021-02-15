@@ -38,16 +38,21 @@ if (isset($_GET['login'])) {
     }
 ?>
 
-<form action ="?login=1" method = "post">
-    <label for="email">E-Mail address: <br></label>
-    <input type="email" size="40" maxlength="250" name="email"><br><br>
-    <label for="password">Your Password: <br></label>
-    <input type="password" size="40" maxlength="250" name="password"><br><br>
-    <input type="submit" value="Let me in!">
-</form>
+<div class="form">
+    <form action ="?login=1" method = "post">
+        <label for="email">E-Mail address: <br></label>
+        <input type="email" size="40" maxlength="250" name="email"><br><br>
+        <label for="password">Your Password: <br></label>
+        <input type="password" size="40" maxlength="250" name="password"><br><br>
+        <input type="submit" value="Let me in!">
+    </form>
 
-    <h2>Not already registered?</h2>
-    <a href="registry.php" class="button rot">Get me registered!</a>
+
+        <h2>Not already registered?</h2>
+        <a href="registry.php" class="button rot">Get me registered!</a>
+</div>
+
+
 
 </body>
 </html>
