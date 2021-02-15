@@ -11,11 +11,6 @@
 
 <body>
 
-<?php
-  include "../includes/header.php"
-?>
-
-
 <section class="">
     <?php include_once "../functions/login.php" ?> 
 </section>

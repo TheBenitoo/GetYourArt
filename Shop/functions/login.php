@@ -12,7 +12,7 @@ if (isset($_GET['login'])) {
     $statement = $pdo->prepare("SELECT * FROM users WHERE Email = :email");
     $result = $statement->execute(array('email' => $email));
     $user = $statement->fetch();
-
+    var_dump($user);
     // checks if the password is correct
     if($user !== false && password_verify($password, $user['PASSWORD'])) {
         $_SESSION['userid'] = $user['UserID'];
@@ -32,9 +32,17 @@ if (isset($_GET['login'])) {
 </head>
 <body>
 <?php
-if(isset($errorMessage)) {
-    echo $errorMessage;
-}
+    if(isset($errorMessage)) {
+        echo $errorMessage;
+    }
+
+    var_dump($_SESSION);
+    if(isset($_SESSION['userid'])) {
+        include "../includes/header.php";
+    }
+    else {
+        include "../includes/header_after_login.php";
+    }
 ?>
 
 <form action ="?login=1" method = "post">
