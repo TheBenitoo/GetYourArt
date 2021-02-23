@@ -68,12 +68,12 @@
 ?>
 
 
-<body>
+<body style="background-image: url('../assets/images/product_background.jpg');">
 <?php
       include "../includes/header.php"
 ?>
 
-<div class='bigbox1'>
+
 
 <?php
   //GET int from URL
@@ -91,30 +91,38 @@
   $result = mysqli_query($connect, $query);  
   $row = mysqli_fetch_array($result);
 
-  echo "<div class='boxProduct text'>";
-  echo  "<img style='height: 100%; width: 100%; object-fit: contain' src=".$obj->ImageSource.">";
-  echo "</div>";
-  $product_id = $obj->ProductID;
-  echo "<div class='boxProduct text'>";
+  echo "<div class='containerProduct'>";
+  echo  "<img style='height: 60%; width: 50%; object-fit: contain; margin: 3em 3em 3em 1em;' src=".$obj->ImageSource.">";
+  
+  /*$product_id = $obj->ProductID;
+  echo "<div class='product'>";
   echo "" .$obj->ProductName;
   echo "<br> Price: " .$obj->ProductPrice. "€ </br>";
   echo "<form method='post'>";
   echo "<input type='hidden' name='product' value='".$obj->ProductID."'>";
-  echo "</form>";
+  echo "</form>";*/
+  
   ?>
+
+
 <form method="post" action="product.php?action=add&id=<?php echo $row["ProductID"]; ?>">  
-                          <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">  
-                               <h4 class="text-info"><?php echo $row["ProductName"]; ?></h4>  
-                               <h4 class="text-danger">$ <?php echo $row["ProductPrice"]; ?></h4>  
+                         
+                         
+                          <div class="product">  
+                               <h2 class=""><?php echo $row["ProductName"]; ?></h2>  
+                               
+                               <p class="desc"><?php echo $row["ProductDescription"]; ?></p>
+                               <h4 class="">$ <?php echo $row["ProductPrice"]; ?></h4>
                                <input type="text" name="quantity" class="form-control" value="1" />  
                                <input type="hidden" name="hidden_name" value="<?php echo $row["ProductName"]; ?>" />  
-                               <input type="hidden" name="hidden_price" value="<?php echo $row["ProductPrice"]; ?>" />  
-                               <input type="submit" name="add_to_cart" style="margin-top:5px;" class="" value="Add to Cart" />  
+                               <input type="hidden" name="hidden_price" value="<?php echo $row["ProductPrice"]; ?>" /> 
+
+                               <input class="button_add" type="submit" name="add_to_cart" value="Add to Cart" />  
                           </div>  
                      </form>  
-
+                    </div>
     
   
-</div>
+
 </body>
 </html>

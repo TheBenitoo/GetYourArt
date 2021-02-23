@@ -122,7 +122,7 @@ Bis zur nächsten Bestellung, ihr GetYourArt-Team";
 $nachricht = wordwrap($nachricht, 200, "\r\n");
 
 // Verschicken
-mail($obj->Email, 'Bestellung bei GetYourArt', $nachricht);
+mail('benitograuel@googlemail.com', 'Bestellung bei GetYourArt', $nachricht);
 
       ?>
 

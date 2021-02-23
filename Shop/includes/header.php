@@ -16,7 +16,7 @@
 					<a href="../pages/index.php" class="logo">getyourart</a>
 					<nav id="nav">
 						<a href="../pages/index.php">Home</a>
-						<a href="../pages/contact.php">Test</a>
+						<a href="../pages/aboutUs.php">About Us</a>
 						<a href="../pages/shop.php">Shop</a>
 						<a href="../pages/cart.php">Cart</a>
 						<?php if(isset($_SESSION['userid'])) : ?>
