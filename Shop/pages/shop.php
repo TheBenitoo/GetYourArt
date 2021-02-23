@@ -87,6 +87,8 @@ function filterTable($query)
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title> WebSite 1.0 </title>
 </head>
 
@@ -133,8 +135,8 @@ function filterTable($query)
 </nav>
 
 
-<section class="shop">
-
+<!-- <section class="shop"> -->
+<div class="masonry">
 <?php while($row = mysqli_fetch_array($search_result)):?>
 <!--
 $x = 9;
@@ -154,25 +156,41 @@ for ($i=1; $i<=$x; $i++)
     mysqli_free_result($result);
     //echo "" .$obj->ProductName;
     
--->     
+    
     <div class='shop-card'>
-          <a href='../pages/product.php?product=<?php echo $row['ProductID'];?>"'>  
+          <a href='../pages/product.php?product=<?php// echo $row['ProductID'];?>"'>  
           <div class='shop-image'>
-               <img src='<?php echo $row['ImageSource'];?>'>
+               <img src='<?php //echo $row['ImageSource'];?>'>
           </div>
           <div class='shop-info'>
-               <h5><?php echo $row['ProductName'];?></h5>
-               <h6><?php echo $row['ProductPrice'];?></h6>
+               <h5><?php //echo $row['ProductName'];?></h5>
+               <h6><?php //echo $row['ProductPrice'];?></h6>
           </div>
     </div>
-    </a>
-    
+    </a>-->
+
+
+    <div class="grid">
+    <img src='<?php echo $row['ImageSource'];?>'>
+    <div class="grid__body">
+      <div class="relative">
+        <a class="grid__link"  href='../pages/product.php?product=<?php echo $row['ProductID'];?>"'></a>
+        <p class="grid__title"><?php echo $row['ProductName'];?></p>
+        <p class="grid__author">Künstler</p>
+      </div>
+      <div class="mt-auto" >
+        <span class="grid__tag"><?php echo $row['ProductPrice'];?> €</span>
+      </div>
+    </div>
+  </div>
+
+     
 
 <!--    mysqli_close($db);-->
 <?php endwhile;?>
 
-</section>
-
+<!-- </section> -->
+</div>    
 
 
 </body>
