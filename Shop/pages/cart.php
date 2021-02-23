@@ -149,9 +149,27 @@
                 </div>  
 
 
-
+      <?php  if(isset($_SESSION['userid'])){      ?>
+          <form action="../includes/savecart.php" method="POST">
+        <button type="submit" name="submit" class="checkout">Checkout</button>
+        </form>             
       
-      <button class="checkout">Checkout</button>
+      <?php 
+     $product = $_SESSION['userid'];
+    
+  
+     $query = "SELECT *
+               FROM users
+               WHERE UserID = '$product'
+               ";
+   
+     $result = mysqli_query($db, $query);
+     $obj = mysqli_fetch_object($result);
+     mysqli_free_result($result);
+     echo $obj->Email;
+     
+     } ?>
+
 
 </div>
   </div>
