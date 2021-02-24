@@ -24,6 +24,8 @@ include "../includes/header.php";
     <p>Verantwortlich nach § 55 Abs.2 RStV<br />Moritz Schreiberling<br />Musterstraße 2<br />80999 München</p>
 </div>
 
+<a href="https://docs.google.com/document/d/147YmAK0ccpYokbhMDjEPjNebXd69besnX0AdIZdwNTg/edit?pli=1#heading=h.z6ne0og04bp5" class="buttonlink" target="_blank"> Zur Projektdokumentation</a>
+
 </body>
 <?php include "../includes/footer.php"; ?>
 </html>

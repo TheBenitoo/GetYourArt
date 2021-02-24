@@ -1274,3 +1274,14 @@ div.imprint {
 	justify-content: center;
 	flex-flow: column;
 }
+h2.prompt {
+	margin: 0 auto;
+	color: #e5474b;
+	font-size: 48pt;
+	text-align: center;
+}
+
+a.buttonlink {
+	color: #e5474b;
+	font-size: 24pt;
+}

@@ -15,7 +15,7 @@ if (isset($_GET['login'])) {
     // checks if the password is correct
     if($user !== false && password_verify($password, $user['PASSWORD'])) {
         $_SESSION['userid'] = $user['UserID'];
-        die('Login was successful! Let\'s check out all the magic stuff!<a href="../pages/index.php" style="color: #e5474b"> Bring me to the Art!</a>');
+        die('<h2 class="prompt"> Login was successful! Let\'s check out all the magic stuff!<a href="../pages/index.php"> Bring me to the Art!</a></h2>');
     }  else  {
         $errorMessage = "E-mail or password wrong. Please try again<br>!";
     }
