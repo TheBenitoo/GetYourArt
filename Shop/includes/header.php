@@ -20,6 +20,7 @@
 						<a href="../pages/shop.php">Shop</a>
 						<a href="../pages/cart.php">Cart</a>
 						<?php if(isset($_SESSION['userid'])) : ?>
+                            <a href="../pages/profile.php">Profile</a>
                             <a href="../pages/logout.php">Logout</a>
                         <?php else : ?>
                             <a href="../pages/login.php">Login</a>

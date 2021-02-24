@@ -24,6 +24,9 @@ if(isset($_GET['register'])) {
     $lastname = $_POST['lastname'];
     $password = $_POST['password'];
     $password2 = $_POST['password2'];
+    $street = $_POST['street'];
+    $postcode = $_POST['postcode'];
+    $city = $_POST['city'];
 
     // checks if the entered email is in a valid format
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -59,8 +62,8 @@ if(isset($_GET['register'])) {
     if(!$error) {
         $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
-        $statement = $pdo->prepare("INSERT INTO users (email, password, FirstName, LastName) VALUES (:email, :password, :firstname, :lastname)");
-        $result = $statement->execute(array('email' => $email, 'password' => $password_hash, 'firstname' => $firstname, 'lastname' => $lastname));
+        $statement = $pdo->prepare("INSERT INTO users (email, password, FirstName, LastName, street, postcode, city) VALUES (:email, :password, :firstname, :lastname, :street, :postcode, :city)");
+        $result = $statement->execute(array('email' => $email, 'password' => $password_hash, 'firstname' => $firstname, 'lastname' => $lastname, 'street' => $street, 'postcode' => $postcode, 'city' => $city));
 
         if($result) {
             echo 'You have been successfully registered! <a href="login.php">Get me to the Login!</a>';
@@ -74,9 +77,10 @@ if(isset($_GET['register'])) {
 if($showFormular) {
     ?>
 
+<div class="form">
     <form action="?register=1" method="post">
         Email:<br>
-        <input type="email" size="40" maxlength="250" name="email" id="email"><br><br>
+        <input type="email" size="40" maxlength="100" name="email" id="email"><br><br>
 
         Your password:<br>
         <input type="password" size="40"  maxlength="250" name="password" id="password"><br>
@@ -85,14 +89,23 @@ if($showFormular) {
         <input type="password" size="40" maxlength="250" name="password2" id="password2"><br><br>
 
         Your first name:<br>
-        <input type="text" size="40" maxlength="250" name="firstname" id="firstname"><br><br>
+        <input type="text" size="40" maxlength="256" name="firstname" id="firstname"><br><br>
 
         Your last name:<br>
-        <input type="text" size="40" maxlength="250" name="lastname" id="lastname"><br><br>
+        <input type="text" size="40" maxlength="256" name="lastname" id="lastname"><br><br>
+
+        Your street:<br>
+        <input type="text" size="40" maxlength="100" name="street" id="street"><br><br>
+
+        Your postcode:<br>
+        <input type="text" size="40" maxlength="5" name="postcode" id="postcode"><br><br>
+
+        Your city:<br>
+        <input type="text" size="40" maxlength="100" name="city" id="city"><br><br>
 
         <input type="submit" class="button rot" value="Register">
     </form>
-
+</div>
 <?php
 }
 ?>

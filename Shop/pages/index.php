@@ -7,7 +7,6 @@
 <title> GetYourArt </title>
 </head>
 
-´´
 <body>
       
     <?php

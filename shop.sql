@@ -109,20 +109,19 @@ INSERT INTO `product` (`ProductID`, `ProductName`, `ProductCategory`, `ProductDe
 
 CREATE TABLE `users` (
   `UserID` int(11) NOT NULL,
-  `Username` varchar(45) DEFAULT NULL,
   `FirstName` varchar(256) DEFAULT NULL,
   `LastName` varchar(256) NOT NULL,
-  `PASSWORD` varchar(70) DEFAULT NULL,
+  `PASSWORD` varchar(255) DEFAULT NULL,
   `Email` varchar(100) DEFAULT NULL,
-  `AddressID` int(11) NOT NULL
+  `street` varchar(100) NOT NULL,
+  `postcode` varchar(5) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  `AddressID` int(11) NOT NULL,
+  `created At` TIMESTAMP NOT NULL DEFAULT '2021-02-08 13:45:01',
+  `updated At` TIMESTAMP,
+  `profileImage` varchar(50) DEFAULT '../assets/images/kuenstler.jpeg'
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Daten für Tabelle `users`
---
-
-INSERT INTO `users` (`UserID`, `Username`, `FirstName`, `LastName`, `PASSWORD`, `Email`, `AddressID`) VALUES
-(1, 'USER', 'Max Mustermann', '0', '*676243218923905CF94CB52A3C9D3EB30CE8E20D', 'Max.Mustermann@gmx.de', 0);
 
 --
 -- Indizes der exportierten Tabellen
