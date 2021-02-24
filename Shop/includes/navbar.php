@@ -22,6 +22,7 @@
                 <li> <a href="../functions/registry.php"> Blog      </a> </li>
                 <li> <a href="../pages/contact.php"> Contact  </a> </li>
                 <li> <a href="../pages/aboutUs.php"> About Us      </a> </li>
+                <li> <a href="../pages/profile.php"> Profile  </a> </li>
                 <li> <a href="../functions/login.php"><i class="fa fa-fw fa-user"></i> Login</a></li> 
                 <li> <a href="../functions/registry.php"> Profile      </a> </li>
                 <li> <a href="../pages/cart.php"> Cart     </a> </li>

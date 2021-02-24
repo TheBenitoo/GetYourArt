@@ -10,7 +10,7 @@
 
 </header>
 
-<body style="">
+<body>
 	<nav>
 		<div class="toggle">
 			<i class="fa fa-bars" aria-hidden="true"></i>
