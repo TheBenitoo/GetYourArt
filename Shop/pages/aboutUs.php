@@ -13,21 +13,47 @@
 
 <body>
 
-<?php
-  include "../includes/navbar.php"
-?>
-
 
 
 <body>
-<p> Hello </p>
-<p> Hello </p>
-<p> Hello </p>
-<p> Hello </p>
-<form action="upload.php" method="post" enctype="multipart/form-data">
-  Select image to upload:
-  <input type="file" name="fileToUpload" id="fileToUpload">
-  <input type="submit" value="Upload Image" name="submit">
-</form>
+<section id="two">
+				<div class="inner">
+					<article>
+						<div class="content">
+							<header>
+								<h3>Benito</h3>
+							</header>
+							<div class="image fit">
+								<img src="../assets/images/pinsel.jpeg" alt="" />
+							</div>
+							<p>Ein Künstler für sich! Bei ihm hängen hunderte von Gemälden.
+              Er ist Webprogrammierer und leidenschaftlicher Zeichner.</p>
+						</div>
+					</article>
+					<article class="alt">
+						<div class="content">
+							<header>
+								<h3>Pascal</h3>
+							</header>
+							<div class="image fit">
+								<img src="../assets/images/kuenstler.jpeg" alt="" />
+							</div>
+							<p>Von neuen Artworks kann er garnicht genug bekommen.
+              Er ist Webprogrammierer und leidenschaftlicher Maler.</p>
+						</div>
+					</article>
+				</div>
+			</section>
+
+      <section id="one">
+				<div class="inner">
+					<header>
+						<h2>Unser Auftrag</h2>
+					</header>
+					<p>Zusammen mit unseren Mitarbeitern haben wir es uns zum Auftrag gemacht mehr Farbe in die Wohnungen und Häuser zu bekommen.</p>
+          <p>Durch recycletes Premiumpapier findet jede Art von Kunst auf unseren Drucken ihren Glanz.</p>
+					
+				</div>
+			</section>
 </body>
 </html>

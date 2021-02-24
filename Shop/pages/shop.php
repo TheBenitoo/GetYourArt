@@ -158,14 +158,14 @@ for ($i=1; $i<=$x; $i++)
     <div class='shop-card'>
           <a href='../pages/product.php?product=<?php echo $row['ProductID'];?>"'>  
           <div class='shop-image'>
-               <img src='<?php echo $row['ImageSource'];?>' alt=''>
+               <img src='<?php echo $row['ImageSource'];?>'>
           </div>
           <div class='shop-info'>
                <h5><?php echo $row['ProductName'];?></h5>
                <h6><?php echo $row['ProductPrice'];?></h6>
           </div>
     </div>
-
+    </a>
     
 
 <!--    mysqli_close($db);-->
