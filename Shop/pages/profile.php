@@ -21,7 +21,7 @@ extract($resultArray[0], EXTR_OVERWRITE);
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../assets/CSS/style.css">
-<title> Profile</title>
+<title> Profile </title>
 </head>
 
 

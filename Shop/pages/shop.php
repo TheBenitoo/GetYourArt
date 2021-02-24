@@ -87,7 +87,7 @@ function filterTable($query)
 <head>
 
 <meta charset="UTF-8">
-<title> WebSite 1.0 </title>
+<title> Shop </title>
 </head>
 
 <?php
