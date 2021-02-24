@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title> WebSite 1.0 </title>
 <?php
+    session_start();
     include "../includes/header.php"
 ?>
 </head>

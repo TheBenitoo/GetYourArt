@@ -1001,5 +1001,26 @@ $dark: #4E4E4E;*/
 	margin-top: auto;
 }
 
+<<<<<<< HEAD
   
   
+=======
+.profile-right.profile-info-data {
+	display: flex;
+	justify-content: space-between;
+}
+
+.profile-right.profile-info-data-box {
+	width: 45%;
+}
+
+.profile-right.profile-info-data-box h4 {
+	margin-bottom: 5px;
+}
+
+.profile-right.profile-info-data-box p {
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+
+>>>>>>> 061462a68949e183ac685f1a517c37ddb32b62e9
