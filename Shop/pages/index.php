@@ -7,25 +7,24 @@
 <title> GetYourArt </title>
 </head>
 
-´´
 <body>
       
     <?php
       include "../includes/header.php"
     ?>
 
-		<!-- Banner -->
+		<!-- Titelbild -->
 			<section id="banner">
 				<div class="inner">
 					<h1>Get Your Art: <span>A platform to get your<br />
 					prefered Art today!</span></h1>
 					<ul class="actions">
-						<li><a href="../pages/shop.php" class="button alt">To our Shop</a></li>
+						<li><a href="../pages/shop.php" class="button">To our Shop</a></li>
 					</ul>
 				</div>
 			</section>
 
-		<!-- One -->
+		<!-- Erster Abschnitt -->
 			<section id="one">
 				<div class="inner">
 					<header>
@@ -38,7 +37,7 @@
 				</div>
 			</section>
 
-		<!-- Two -->
+		<!-- Zweiter Abschnitt -->
 			<section id="two">
 				<div class="inner">
 					<article>
@@ -66,9 +65,10 @@
 				</div>
 			</section>
 
-		<!-- Three -->
+		<!-- Dritter Abschnitt -->
 			<section id="three">
 				<div class="inner">
+					<!-- Artikel 1 -->
 					<article>
 						<div class="content">
 							<span class="icon fa-laptop"></span>
@@ -81,6 +81,7 @@
 							</ul>
 						</div>
 					</article>
+					<!-- Artikel 2 -->
 					<article>
 						<div class="content">
 							<span class="icon fa-diamond"></span>
@@ -93,6 +94,7 @@
 							</ul>
 						</div>
 					</article>
+					<!-- Artikel 3 -->
 					<article>
 					<div class="content">
 							<span class="icon fa-laptop"></span>
@@ -109,7 +111,7 @@
 			</section>
 
 		<!-- Footer -->
-			<section id="footer">
+			<section>
 				<div class="inner">
 					<header>
 						<h2>Get in Touch</h2>

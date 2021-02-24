@@ -337,7 +337,7 @@
 	}
 
 
-/* Button */
+/* //////////////////// Button //////////////////*/
 
 	.button {
 
@@ -540,9 +540,6 @@
 			}
 
 		#header a {
-			-moz-transition: color 0.2s ease-in-out;
-			-webkit-transition: color 0.2s ease-in-out;
-			-ms-transition: color 0.2s ease-in-out;
 			transition: color 0.2s ease-in-out;
 			display: inline-block;
 			padding: 0 2em;
@@ -579,147 +576,8 @@
 
 /* Menu */
 
-	#nav {
-		display: inline-block;
-	}
-		@media screen and (max-width: 980px) {
 
-			#nav {
-				display: none;
-			}
-		}
 
-	.navPanelToggle {
-		position: fixed;
-		text-decoration: none;
-		height: 4em;
-		right: 3em;
-		top: .75em;
-		width: 4em;
-		display: none;
-		z-index: 10002;
-	}
-
-		.navPanelToggle:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
-			font-style: normal;
-			font-weight: normal;
-			text-transform: none !important;
-			color: #fff;
-			display: block;
-			font-size: 16px;
-			height: 2.25em;
-			left: 0.5em;
-			line-height: 2.25em;
-			position: absolute;
-			text-align: center;
-			top: 0.5em;
-			width: 3.5em;
-		}
-
-		@media screen and (max-width: 980px) {
-			.navPanelToggle {
-				display: block;
-			}
-		}
-
-		@media screen and (max-width: 736px) {
-			.navPanelToggle {
-				right: 1em;
-			}
-		}
-
-		.navPanelToggle *:before {
-			color: #fff;
-			display: block;
-			font-size: 16px;
-			height: 2.25em;
-			left: 0.5em;
-			line-height: 2.25em;
-			position: absolute;
-			text-align: center;
-			top: 0.5em;
-			width: 3.5em;
-		}
-
-	#navPanel {
-		visibility: hidden;
-		overflow-y: auto;
-		position: fixed;
-		right: 0;
-		top: 0;
-		background: #1c1c1c;
-		color: #fff;
-		height: 100%;
-		max-width: 80%;
-		width: 20em;
-		padding: 1.5em;
-		text-transform: uppercase;
-		z-index: 10003;
-		display: none;
-	}
-
-		#navPanel.visible {
-			box-shadow: 0 0 1.5em 0 rgba(0, 0, 0, 0.2);
-			visibility: visible;
-		}
-
-		#navPanel a:not(.close) {
-			border-top: solid 1px rgba(255, 255, 255, 0.1);
-			color: #fff;
-			font-weight: 700;
-			display: block;
-			padding: 0.75em 0;
-			text-decoration: none;
-		}
-
-			#navPanel a:not(.close):first-child {
-				border: none;
-			}
-
-		#navPanel .close {
-			border: 0;
-			color: #484848;
-			cursor: pointer;
-			display: block;
-			height: 4em;
-			padding-right: 1.25em;
-			position: absolute;
-			right: 0;
-			text-align: right;
-			top: 0;
-			width: 5em;
-		}
-
-			#navPanel .close:before {
-				font-family: FontAwesome;
-				font-style: normal;
-				font-weight: normal;
-				text-transform: none !important;
-				content: '\f00d';
-				width: 3em;
-				height: 3em;
-				line-height: 3em;
-				display: block;
-				position: absolute;
-				right: 0;
-				top: 0;
-				text-align: center;
-			}
-
-			#navPanel .close:hover {
-				color: inherit;
-			}
-
-		@media screen and (max-width: 980px) {
-
-			#navPanel {
-				display: block;
-			}
-
-		}
 
 /* Banner */
 
@@ -735,26 +593,26 @@
 		z-index: 9999;
 	}
 
-		#banner h1, #banner h2, #banner h3 {
+		#banner h1 {
 			color: #fff;
 		}
 
 
-			#banner .button.alt {
+			#banner .button {
 				background-color: transparent;
 				box-shadow: inset 0 0 0 2px #fff;
 				color: #ffffff !important;
 			}
 
-				#banner .button.alt:hover {
+				#banner .button:hover {
 					background: rgba(255, 255, 255, 0.25);
 				}
 
-				#banner .button.alt:active {
+				#banner .button:active {
 					background-color: rgba(255, 255, 255, 0.2);
 				}
 
-				#banner .button.alt.icon:before {
+				#banner .button.icon:before {
 					color: #f8d1d2;
 				}
 
@@ -877,9 +735,6 @@
 			}
 
 				#two .inner {
-					-moz-flex-direction: column;
-					-webkit-flex-direction: column;
-					-ms-flex-direction: column;
 					flex-direction: column;
 				}
 
@@ -931,9 +786,6 @@
 			@media screen and (max-width: 980px) {
 
 				#three .inner {
-					-moz-flex-direction: column;
-					-webkit-flex-direction: column;
-					-ms-flex-direction: column;
 					flex-direction: column;
 				}
 

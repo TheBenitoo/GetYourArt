@@ -24,10 +24,10 @@
                         <?php else : ?>
                             <a href="../pages/login.php">Login</a>
                         <?php endif; ?>
-
 					</nav>
 				</div>
 			</header>
-			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+
 </body>
 </html>
