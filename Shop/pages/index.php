@@ -10,7 +10,7 @@
 <body>
       
     <?php
-      include "../includes/header.php"
+      include "../includes/header.php";
     ?>
 
 		<!-- Titelbild -->
@@ -122,4 +122,5 @@
 		<!-- Scripts -->
 
 	</body>
+    <?php include "../includes/footer.php"; ?>
 </html>

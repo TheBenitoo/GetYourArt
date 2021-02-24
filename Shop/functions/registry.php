@@ -121,4 +121,5 @@ if($showFormular) {
 }
 ?>
 </body>
+<?php include "../includes/footer.php"; ?>
 </html>

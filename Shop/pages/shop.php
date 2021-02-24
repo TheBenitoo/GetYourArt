@@ -69,7 +69,7 @@ function filterTable($query)
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title> WebSite 1.0 </title>
+<title> Shop </title>
 </head>
 
 <?php  ?>
@@ -146,4 +146,5 @@ function filterTable($query)
 
 
 </body>
+<?php include "../includes/footer.php"; ?>
 </html>

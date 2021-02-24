@@ -5,7 +5,7 @@
 <head>
 
 <meta charset="UTF-8">
-<title> WebSite 1.0 </title>
+<title> About Us </title>
 <?php
     session_start();
     include "../includes/header.php"
@@ -57,4 +57,5 @@
 				</div>
 			</section>
 </body>
+<?php include "../includes/footer.php"; ?>
 </html>
