@@ -116,7 +116,7 @@ CREATE TABLE `users` (
   `AddressID` int(11) NOT NULL,
   `created At` TIMESTAMP NOT NULL DEFAULT '2021-02-08 13:45:01',
   `updated At` TIMESTAMP,
-  `profileImage` varchar(50) DEFAULT '../assets/images/photo-1523626797181-8c5ae80d40c2.jpg'
+  `profileImage` varchar(50) DEFAULT '../assets/images/kuenstler.jpeg'
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
