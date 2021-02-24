@@ -97,9 +97,9 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`ProductID`, `ProductName`, `ProductCategory`, `ProductDescription`, `ImageSource`, `ProductStock`, `ProductPrice`, `ProductRetail`) VALUES
-(1, 'Der Schrei', 'Artwork', 'Just Art', '../images/300px-The_Scream.jpg', 10, '200.00', '0.00'),
-(2, 'Mona Lisa', 'Artwork', 'Bla Bla', '../images/mona_lisa.jpg', 1, '99999.99', '0.00'),
-(3, 'Eisblumen', 'Artwork', 'Eisblumen , blau, weiß', '../images/eisblumen.jpg', 40, '299.00', '0.00');
+(1, 'Der Schrei', 'Artwork', 'Just Art', '../assets/images/300px-The_Scream.jpg', 10, '200.00', '0.00'),
+(2, 'Mona Lisa', 'Artwork', 'Bla Bla', '../assets/images/mona_lisa.jpg', 1, '99999.99', '0.00'),
+(3, 'Eisblumen', 'Artwork', 'Eisblumen , blau, weiß', '../assets/images/eisblumen.jpg', 40, '299.00', '0.00');
 
 -- --------------------------------------------------------
 
@@ -113,9 +113,6 @@ CREATE TABLE `users` (
   `LastName` varchar(256) NOT NULL,
   `PASSWORD` varchar(255) DEFAULT NULL,
   `Email` varchar(100) DEFAULT NULL,
-  `street` varchar(100) NOT NULL,
-  `postcode` varchar(5) NOT NULL,
-  `city` varchar(100) NOT NULL,
   `AddressID` int(11) NOT NULL,
   `created At` TIMESTAMP NOT NULL DEFAULT '2021-02-08 13:45:01',
   `updated At` TIMESTAMP,

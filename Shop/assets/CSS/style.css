@@ -1246,3 +1246,21 @@ img.profile {
 	letter-spacing: 3px;
 }
 
+.profile-right.profile-info-data {
+	display: flex;
+	justify-content: space-between;
+}
+
+.profile-right.profile-info-data-box {
+	width: 45%;
+}
+
+.profile-right.profile-info-data-box h4 {
+	margin-bottom: 5px;
+}
+
+.profile-right.profile-info-data-box p {
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+

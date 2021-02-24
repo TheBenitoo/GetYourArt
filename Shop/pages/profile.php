@@ -33,7 +33,7 @@ extract($resultArray[0], EXTR_OVERWRITE);
 <div class="profile-vertical">
     <div class="profile-wrapper">
         <div class="profile-left">
-            <img src='<?php echo $profileImage; ?>' alt="Your Profile Picture" width="100">
+            <img src='<?php echo $profileImage; ?>' alt="Your Profile Picture" width="125">
             <h4> <?php echo $FirstName.' '.$LastName ?> </h4>
         </div>
         <div class="profile-right">
