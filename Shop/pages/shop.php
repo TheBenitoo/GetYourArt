@@ -14,7 +14,9 @@ if(isset($_POST['search']))
           $valueToSearch = $_POST['valueToSearch'];
 
           $query = "SELECT * FROM product 
-                     WHERE ProductID = '1' 
+                     WHERE CONCAT(`ProductCategory`) LIKE '%".$valueToSearch."%'
+                     AND ProductPrice
+                     BETWEEN '$valuePriceMin' AND '$valuePriceMax' 
                      ";
           $search_result = filterTable($query); 
      }
@@ -91,9 +93,9 @@ function filterTable($query)
                     <label form="categories">Category:</label>
                          <select id="categories" name="valueToSearch">
                               <option value="%">All</option>
-                              <option value="popart">PopArt</option>
-                              <option value="artwork">Artwork</option>
-                              <option value="smth1">Smth</option>
+                              <option value="Painting">Painting</option>
+                              <option value="Abstract">Abstract</option>
+                              <option value="Artwork">Artwork</option>
                          </select>
           </div>
 
@@ -131,7 +133,7 @@ function filterTable($query)
                          <!-- ProductPage aufrufen und ID in Adresse mit übergeben-->
                          <a class="grid__link"  href='../pages/product.php?product=<?php echo $row['ProductID'];?>"'></a>
                          <p class="grid__title"><?php echo $row['ProductName'];?></p>
-                         <p class="grid__author">Künstler</p>
+                         <p class="grid__author"><?php echo $row['creator'];?></p>
                     </div>
                <div class="mt-auto" >
                <span class="grid__tag"><?php echo $row['ProductPrice'];?> €</span>

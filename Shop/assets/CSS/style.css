@@ -491,7 +491,7 @@
 	font-family: 'Pacifico', cursive;
 	display: inline-block;
 	height: inherit;
-	left: 0;
+	left: 1em;
 	line-height: inherit;
 	margin: 0;
 	padding: 0;
@@ -536,9 +536,7 @@ li a {
 	font-size: .85em;
 }
 
-ul li:hover {
-	
-}
+
 
 ul li a:hover {
 	text-decoration: none;

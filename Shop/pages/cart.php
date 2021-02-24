@@ -96,7 +96,7 @@
       
       <?php 
      $product = $_SESSION['userid'];
-    
+          
   
      $query = "SELECT *
                FROM addresses
@@ -109,7 +109,8 @@
      ?>
      <h2>Shipping address</h2>
      <?php 
-     echo $obj->Street, $obj->StreetNumber. "<br />"; 
+
+     echo $obj->Street, " " .$obj->StreetNumber. "<br />"; 
      echo $obj->Postcode. "<br />";
      echo $obj->City. "<br />";
      echo $obj->Country;

@@ -65,7 +65,7 @@
            $total =  ($values["item_quantity"] * $values["item_price"]);
 
           $sql = "INSERT INTO cartitems (CartID, Quantity,price,ProductID,pricesum) 
-          VALUES ('$cartID','$quantity','$price', '$id', '$total')";
+          VALUES ('$cartid','$quantity','$price', '$id', '$total')";
             mysqli_query($connect,$sql);
         }
         unset($_SESSION['shopping_cart']);

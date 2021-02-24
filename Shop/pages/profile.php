@@ -14,7 +14,7 @@ $resultArray = $stmnt->fetchAll(\PDO::FETCH_ASSOC);
 extract($resultArray[0], EXTR_OVERWRITE);
 
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 
 <html>
 
@@ -63,5 +63,6 @@ extract($resultArray[0], EXTR_OVERWRITE);
     </div>
 </div>
 </body>
-<?php include "../includes/footer.php"; ?>
+<footer><?php include "../includes/footer.php"; ?></footer>
+
 </html>

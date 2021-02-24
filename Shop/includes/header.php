@@ -27,6 +27,11 @@
                             <a href="../pages/login.php">Login</a>
                         <?php endif; ?>
 			</li>
+			<li>
+				<?php if(isset($_SESSION['userid'])) : ?>
+                <a href="../pages/profile.php">Profile</a>
+				<?php endif; ?>
+			</li>
 		</ul>
 	</nav>
 	
