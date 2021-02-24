@@ -1,6 +1,7 @@
+<?php require_once "../includes/database.php" ?>
 <?php   
  session_start();  
- $connect = mysqli_connect("localhost", "root", "", "shop");  
+  
  if(isset($_POST["add_to_cart"]))  
  {  
       if(isset($_SESSION["shopping_cart"]))  
@@ -65,7 +66,7 @@
 </head>
 
 
-<?php require_once "../includes/database.php" ?>
+
 
 
 <body style="background-image: url('../assets/images/product_background.jpg');">

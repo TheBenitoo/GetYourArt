@@ -1,6 +1,6 @@
 <?php   
  session_start();  
- $connect = mysqli_connect("localhost", "root", "", "shop");  
+ require_once "../includes/database.php"; 
 
  if(isset($_GET["action"]))  
  {  
@@ -99,17 +99,24 @@
     
   
      $query = "SELECT *
-               FROM users
+               FROM addresses
                WHERE UserID = '$product'
                ";
    
      $result = mysqli_query($db, $query);
      $obj = mysqli_fetch_object($result);
      mysqli_free_result($result);
-     echo $obj->Email;
-     
+     ?>
+     <h2>Shipping address</h2>
+     <?php 
+     echo $obj->Street, $obj->StreetNumber. "<br />"; 
+     echo $obj->Postcode. "<br />";
+     echo $obj->City. "<br />";
+     echo $obj->Country;
+     ?>
+     <?php
      } ?>
-
+     
 
 </div>
   </div>

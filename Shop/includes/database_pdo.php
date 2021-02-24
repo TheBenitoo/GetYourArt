@@ -1,6 +1,6 @@
 <?php
 
-$dbName = 'shop';
+$dbName = 'getyourart';
 
 $dns = 'mysql:dbname='.$dbName.';host=localhost';
 $user = 'root';

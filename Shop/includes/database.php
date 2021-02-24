@@ -34,7 +34,7 @@ function CloseCon($conn)
  } */
  $user = 'root';
  $pass = '';
- $db = 'shop';
+ $db = 'getyourart';
 
  $db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
 

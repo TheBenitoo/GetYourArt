@@ -1,6 +1,6 @@
 <?php   
  session_start();  
-
+ require_once "../includes/database.php";
 
 
 /* ///Filter/// */
@@ -53,7 +53,7 @@ elseif(isset($_POST['reset'])){
 // Funktion um Filter zu setzen
 function filterTable($query)
 {
-    $connect = mysqli_connect("localhost", "root", "", "shop");
+    $connect = mysqli_connect("localhost", "root", "", "getyourart");
     $filter_Result = mysqli_query($connect, $query);
     return $filter_Result;
 }
@@ -72,7 +72,7 @@ function filterTable($query)
 <title> WebSite 1.0 </title>
 </head>
 
-<?php require_once "../includes/database.php" ?>
+<?php  ?>
 
 
 <body>
