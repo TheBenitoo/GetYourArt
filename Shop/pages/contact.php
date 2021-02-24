@@ -63,5 +63,6 @@ function filterTable($query)
                 <?php endwhile;?>
             </table>
         </form>
-      </body>  
+      </body>
+      <?php include "../includes/footer.php"; ?>
  </html>

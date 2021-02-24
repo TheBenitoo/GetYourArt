@@ -63,4 +63,5 @@ extract($resultArray[0], EXTR_OVERWRITE);
     </div>
 </div>
 </body>
+<?php include "../includes/footer.php"; ?>
 </html>

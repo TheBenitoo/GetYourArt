@@ -55,4 +55,5 @@ if (isset($_GET['login'])) {
 
 
 </body>
+<?php include "../includes/footer.php"; ?>
 </html>

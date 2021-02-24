@@ -176,4 +176,5 @@ for ($i=1; $i<=$x; $i++)
 
 
 </body>
+<?php include "../includes/footer.php"; ?>
 </html>
