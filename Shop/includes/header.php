@@ -10,23 +10,33 @@
 
 </header>
 
-<body>
-<header id="header">
-				<div class="inner">
-					<a href="../pages/index.php" class="logo">getyourart</a>
-					<nav id="nav">
-						<a href="../pages/index.php">Home</a>
-						<a href="../pages/aboutUs.php">About Us</a>
-						<a href="../pages/shop.php">Shop</a>
-						<a href="../pages/cart.php">Cart</a>
-						<?php if(isset($_SESSION['userid'])) : ?>
+<body style="">
+	<nav>
+		<div class="toggle">
+			<i class="fa fa-bars" aria-hidden="true"></i>
+		</div>
+		<ul>
+			<li><a href="../pages/index.php" class="logo">getyourart</a></li>
+			<li><a href="../pages/index.php">Home</a></li>
+			<li><a href="../pages/aboutUs.php">About Us</a></li>
+			<li><a href="../pages/shop.php">Shop</a></li>
+			<li><a href="../pages/cart.php">Cart</a></li>
+			<li><?php if(isset($_SESSION['userid'])) : ?>
                             <a href="../pages/logout.php">Logout</a>
                         <?php else : ?>
                             <a href="../pages/login.php">Login</a>
                         <?php endif; ?>
-					</nav>
-				</div>
-			</header>
+			</li>
+		</ul>
+	</nav>
+	
+	<script type="text/javascript">
+  		let toggle = document.querySelector('.toggle')
+  		toggle.addEventListener('click', (e) => {
+    	document.querySelector('ul').classList.toggle('active');
+  })
+</script>
+
 
 
 </body>
