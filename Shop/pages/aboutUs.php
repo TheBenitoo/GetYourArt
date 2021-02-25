@@ -52,7 +52,7 @@
 						<h2>Unser Auftrag</h2>
 					</header>
 					<p>Zusammen mit unseren Mitarbeitern haben wir es uns zum Auftrag gemacht mehr Farbe in die Wohnungen und Häuser zu bekommen.</p>
-          <p>Durch recycletes Premiumpapier findet jede Art von Kunst auf unseren Drucken ihren Glanz.</p>
+          <p>Durch unsere besondere Drucktechnik auf Leinwand wirkt ihr Kunstwerk wie gemalt!</p>
 					
 				</div>
 			</section>
