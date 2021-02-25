@@ -18,7 +18,13 @@
 		<ul>
 			<li><a href="../pages/index.php" class="logo">getyourart</a></li>
 			<li><a href="../pages/index.php">Home</a></li>
-			<li><a href="../pages/aboutUs.php">About Us</a></li>
+			<li><a href="#">About</a>
+					<ul>
+						<li><a href="../pages/aboutUs.php">About Us</a></li>
+						<li><a href="../pages/imprint.php">Impressum</a></li>
+						<li><a href="https://docs.google.com/document/d/147YmAK0ccpYokbhMDjEPjNebXd69besnX0AdIZdwNTg/edit#heading=h.3at9u9s4e0vp">Documentation</a></li>
+					</ul>
+			</li>
 			<li><a href="../pages/shop.php">Shop</a></li>
 			<li><a href="../pages/cart.php">Cart</a></li>
 			<li><?php if(isset($_SESSION['userid'])) : ?>

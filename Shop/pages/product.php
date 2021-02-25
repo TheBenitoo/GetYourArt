@@ -92,7 +92,8 @@
   $row = mysqli_fetch_array($result);
 
   echo "<div class='containerProduct'>";
-  echo  "<img style='height: 60%; width: 50%; object-fit: contain; margin: 3em 3em 3em 1em;' src=".$obj->ImageSource.">";
+  echo  "<img style='height: 60%; width: 50%; object-fit: contain; 
+  margin: 3em 3em 3em 1em;' src=".$obj->ImageSource.">";
   
   ?>
 
@@ -104,7 +105,7 @@
                                
           <p class="desc"><?php echo $row["ProductDescription"]; ?></p>
           <h4 class="">$ <?php echo $row["ProductPrice"]; ?></h4>
-          <input type="text" name="quantity" class="form-control" value="1" />  
+          <input type="text" name="quantity" value="1" />  
           <input type="hidden" name="hidden_name" value="<?php echo $row["ProductName"]; ?>" />  
           <input type="hidden" name="hidden_price" value="<?php echo $row["ProductPrice"]; ?>" />
           <input type="hidden" name="hidden_ImageSource" value="<?php echo $row["ImageSource"]; ?>" /> 

@@ -447,7 +447,36 @@ html, body, div, span, h1, h2, h3, p, a, img, var, u, i, center, ul, li, form, t
 nav {
 	width:100%;
 	background: #1c1c1c; 
+	list-style-type:none; 
+    padding:0;  
+    overflow:hidden;
+	text-align: right;
 }
+nav > li {
+    float:left;
+}
+
+
+
+.nav li a:hover {
+    background-color:#680000; 
+    color:#a2becf
+}
+
+nav li ul {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    width: 100%;
+}
+nav li:hover ul {
+    display: block;
+}
+
+nav li:first-child a { border-left:0; }
+nav li:last-child a { border-right:0; }
 
 ul {
 	width: 80%;
@@ -508,6 +537,7 @@ ul li a:hover {
 		display: block;
 	}
 }
+
 
 
 /* Banner */

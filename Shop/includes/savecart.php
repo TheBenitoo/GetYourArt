@@ -73,8 +73,8 @@
         unset($_SESSION['shopping_cart']);
 
 
-//Email senden
 
+//Email senden
 
 /*Hat leider nicht funktioniert
 // Die Nachricht
