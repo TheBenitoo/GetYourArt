@@ -89,7 +89,7 @@ function filterTable($query)
      <form action="shop.php" method="post">
      <div class="sort">
           <!-- Dropdown für Kategorien -->
-          <div class="collection-sort">
+          <div class="product-filter">
                     <label form="categories">Category:</label>
                          <select id="categories" name="valueToSearch">
                               <option value="%">All</option>
@@ -101,19 +101,19 @@ function filterTable($query)
 
           <!-- Auswahl Preis Minimum -->
 
-          <div class="collection-sort">
+          <div class="product-filter">
                     <label form="minprice">Price:</label>
                     <input type="text" name="minprice" placeholder="price" value="0">
           </div>
 
           <!-- Auswahl Preis Maximum -->
 
-          <div class="collection-sort">
+          <div class="product-filter">
                     <label form="maxprice">Price:</label>
                     <input type="text" name="maxprice" placeholder="price">
           </div>            
 
-          <div class="collection-sort">
+          <div class="product-filter">
                <input type="submit" name="search" value="Filter"><br><br>
                <input type="submit" name="reset" value="Zurücksetzen"><br><br>
           </div>          

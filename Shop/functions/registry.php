@@ -3,6 +3,7 @@
 include "../includes/header.php";
 include "../includes/database_pdo.php";
 session_start();
+$connect = mysqli_connect("localhost", "root", "", "getyourart");
 
 ?>
 <!DOCTYPE html>
@@ -69,6 +70,29 @@ if(isset($_GET['register'])) {
 
         $statement2 = $pdo->prepare("INSERT INTO addresses (Street, StreetNumber, Postcode, City, Country) VALUES (:street, :streetnumber, :postcode, :city, :country)");
         $result2 = $statement2->execute(array('street' => $street, 'streetnumber' => $StreetNumber, 'postcode' => $postcode, 'city' => $city, 'country' => $Country));
+
+
+        //Notlösung AddressID und UserID als Fremdschlüssel mit "AUTO_INCREMENT"
+
+                $query = "SELECT *
+                    FROM users
+                    WHERE Email = '$email'
+                    ";
+        
+            $result = mysqli_query($connect, $query);
+            $obj = mysqli_fetch_object($result);
+            mysqli_free_result($result);
+        
+            $userID = $obj->UserID;
+
+        $sql2 = "UPDATE users SET AddressID = '$userID' WHERE UserID = '$userID'";
+        mysqli_query($connect, $sql2);
+
+        $sql1 = "UPDATE addresses SET UserID = '$userID' WHERE AddressID = '$userID'";
+        mysqli_query($connect, $sql1);
+
+        
+
 
         if($result) {
             echo 'You have been successfully registered! <a href="login.php" class="rot">Get me to the Login!</a>';

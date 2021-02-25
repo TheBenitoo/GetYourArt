@@ -14,18 +14,21 @@
 </head>
 <?php
   require_once "../includes/database.php";
-      include "../includes/header.php";
+  include "../includes/header.php";
       ?>
 <body>
 
 <?php 
     
+
+
     $userID = $_SESSION['userid'];
     
-  
+     //Daten für cart Tabelle
+
      $query = "SELECT *
                FROM addresses
-               WHERE UserID = '$userID'
+               WHERE AddressID = '$userID'
                ";
    
      $result = mysqli_query($db, $query);
@@ -38,13 +41,12 @@
     $street = $obj->Street;
 
 
-
    $sql1 = "INSERT INTO cart (UserID,shipping_street,shipping_city,shipping_number,shipping_postcode) 
    VALUES ('$userID', '$street','$city', '$number', '$zip')";
    mysqli_query($connect, $sql1);
 
 
-    
+    //Daten für cart-items Tabelle
   
    $query = "SELECT *
              FROM cart
@@ -74,9 +76,7 @@
 //Email senden
 
 
-     
-
-
+/*Hat leider nicht funktioniert
 // Die Nachricht
 $nachricht = "Vielen Dank für Ihre Bestellung beiGetYourArt\r\n
 Sie werden in kürze ihr Paket erhalten\r\n
@@ -89,7 +89,7 @@ $nachricht = wordwrap($nachricht, 200, "\r\n");
 // Verschicken
 mail('benitograuel@googlemail.com', 'Bestellung bei GetYourArt', $nachricht);
 
-      ?>
+      */?>
 
 
 <section id="one">
