@@ -82,7 +82,7 @@ function filterTable($query)
 <?php include "../includes/header.php" ?>
 
 
-<nav class="product-filter">
+<nav  class="product-filter">
 
 <h3>Filter</h3> 
 

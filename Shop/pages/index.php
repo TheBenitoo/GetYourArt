@@ -32,7 +32,7 @@
 					</header>
 					<p>Wir sind eine kleine Gruppe von Künstlern und Informatikern. Uns fließt Farbe durch die Adern und wir wollen mehr Menschen an die Kunst bringen.</p>
 					<ul class="actions">
-						<li><a href="#" class="button rot">Learn More</a></li>
+						<li><a href="../pages/aboutUs.php" class="button rot">Learn More</a></li>
 					</ul>
 				</div>
 			</section>
@@ -71,7 +71,7 @@
 					<!-- Artikel 1 -->
 					<article>
 						<div class="content">
-							<span class="icon fa-laptop"></span>
+							<span class="icon fa-paint-brush"></span>
 							<header>
 								<h3>Kleine Künstler</h3>
 							</header>
@@ -84,7 +84,7 @@
 					<!-- Artikel 2 -->
 					<article>
 						<div class="content">
-							<span class="icon fa-diamond"></span>
+							<span class="icon fa-calendar-o"></span>
 							<header>
 								<h3>Einzelstücke</h3>
 							</header>
@@ -97,7 +97,7 @@
 					<!-- Artikel 3 -->
 					<article>
 					<div class="content">
-							<span class="icon fa-laptop"></span>
+							<span class="icon fa-id-card-o"></span>
 							<header>
 								<h3>Anfragen</h3>
 							</header>
@@ -119,7 +119,6 @@
 				</div>
 			</section>
 
-		<!-- Scripts -->
 
 	</body>
     <?php include "../includes/footer.php"; ?>

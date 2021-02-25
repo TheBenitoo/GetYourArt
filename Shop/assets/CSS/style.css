@@ -1,4 +1,4 @@
-@import url(font-awesome.min.css);
+
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700|Pacifico");
 
 
@@ -12,45 +12,6 @@
       font-family: "Montserrat", serif;
 }
 /* ///////////Home//////////// */
-
-
-/* //////////////////////////////////-responsive pictures (discover)-////////////////////////////////// */
-
-/*.row {
-  /* display: -ms-flexbox; IE 10 */
-  /*display: flex;*/
-  /* -ms-flex-wrap: wrap; IE 10 
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
-  /* Create two equal columns that sits next to each other 
-.column {
-  /* -ms-flex: 50%; IE 10 
-  max-width: 50%;
-  flex: 50%;
-  padding: 0 4px;
-}
-
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns 
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other 
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-} 
 
 
 
@@ -84,19 +45,19 @@
 	}
   }
 
-/*/Home/*/
 
-@import url(font-awesome.min.css);
+
+@import url("../assets/CSS/font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700|Pacifico");
 
 
-/* Reset */
+/* ////Zurücksetzen/// */
 html, body, div, span, h1, h2, h3, p, a, img, var, u, i, center, ul, li, form, table, tr, th, td, article {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font-family: "Montserrat", serif;
 	vertical-align: baseline;
 }
 
@@ -117,10 +78,6 @@ html, body, div, span, h1, h2, h3, p, a, img, var, u, i, center, ul, li, form, t
 	table {
 		border-collapse: collapse;
 		border-spacing: 0;
-	}
-
-	body {
-		-webkit-text-size-adjust: none;
 	}
 
 /* Box Model */
@@ -170,7 +127,7 @@ html, body, div, span, h1, h2, h3, p, a, img, var, u, i, center, ul, li, form, t
 /* Type */
 
 	body {
-		font-family: "Lato", sans-serif;
+		font-family: "Montserrat", serif;
 		font-size: 15pt;
 		font-weight: 300;
 		line-height: 2;
@@ -316,7 +273,7 @@ html, body, div, span, h1, h2, h3, p, a, img, var, u, i, center, ul, li, form, t
 				background: #fceced;
 			}
 
-/* Icon */
+/* //////Icon/////// */
 
 	.icon {
 		text-decoration: none;
@@ -335,7 +292,7 @@ html, body, div, span, h1, h2, h3, p, a, img, var, u, i, center, ul, li, form, t
 			display: none;
 		}
 
-/* Image */
+/* /////////Image////////// */
 
 	.image {
 		border-radius: 0;
@@ -370,7 +327,7 @@ html, body, div, span, h1, h2, h3, p, a, img, var, u, i, center, ul, li, form, t
 			}
 
 
-/* Section/Article */
+/* //////Artikel/////// */
 
 	section .inner {
 		max-width: 65em;
@@ -417,10 +374,7 @@ html, body, div, span, h1, h2, h3, p, a, img, var, u, i, center, ul, li, form, t
 		color: #717171;
 	}
 
-/* Header */
-
-
-/* Menu */
+/* /////Navbar///// */
 
 
 .logo {
@@ -445,6 +399,7 @@ html, body, div, span, h1, h2, h3, p, a, img, var, u, i, center, ul, li, form, t
 }
 
 nav {
+	position: sticky;
 	width:100%;
 	background: #1c1c1c; 
 	list-style-type:none; 
@@ -540,7 +495,7 @@ ul li a:hover {
 
 
 
-/* Banner */
+/* /////Banner///// */
 
 	#banner {
 		padding: 13em 0 11em 0;
